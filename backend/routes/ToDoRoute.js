@@ -3,7 +3,7 @@ const { getToDo, saveToDo, updateToDo, deleteToDo } = require("../controllers/To
 
 const router = Router();
 
-router.get("/get", getToDo);
+router.get("/", getToDo);
 router.post("/save", saveToDo);
 router.put("/update", updateToDo);
 router.delete("/delete", deleteToDo);

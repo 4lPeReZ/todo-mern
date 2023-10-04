@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+
 require("dotenv").config();
 
 const routes = require("./routes/ToDoRoute");
@@ -17,8 +18,6 @@ mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => console.log("MongoDB connected..."))
   .catch((err) => console.log(err));
-
-/* app.use("/api", routes); */
 
 app.use(routes);
 
